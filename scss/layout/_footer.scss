@@ -1,0 +1,120 @@
+#footer {
+    width: 100%;
+    padding: 50px;
+    border-top: 1px solid map-get($color, main);
+    @include center;
+    @include sm {
+        padding: 30px;
+    }
+    .footer-group {
+        padding-left: 200px;
+        @include xxl {
+            padding-left: 80px;
+        }
+        @include xl {
+            padding-left: 0px;
+        }
+        .footer-content {
+            word-break: break-all;
+            .brand-sign {
+                height: 163px;
+                width: auto;
+                @include center;
+                @include sm {
+                    justify-content: flex-start;
+                }
+                img {
+                    @include md {
+                        height: 100px;
+                        width: auto;
+                    }
+                }
+            }
+            .contact {
+                h3 {
+                    font-family: $font-family-CN;
+                    color: map-get($color, main);
+                    font-size: map-get($font-size-desktop, small);
+                    font-weight: map-get($font-weight, bold);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                    text-transform: uppercase;
+                    line-height: 42px;
+                    @include md {
+                        font-size: map-get($font-size-mobile, small);
+                    }
+                }
+                a {
+                    font-family: $font-family-CN;
+                    color: white;
+                    font-size: map-get($font-size-desktop, small);
+                    font-weight: map-get($font-weight, medium);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                    opacity: 65%;
+                    text-align: left;
+                    line-height: 42px;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    @include md {
+                        font-size: map-get($font-size-mobile, small);
+                    }
+                    &:hover {
+                        color: map-get($color, hover);
+                        opacity: 1;
+                    }
+                }
+            }
+            .useful-links {
+                h3 {
+                    font-family: $font-family-CN;
+                    color: map-get($color, main);
+                    font-size: map-get($font-size-desktop, small);
+                    font-weight: map-get($font-weight, bold);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                    text-transform: uppercase;
+                    line-height: 42px;
+                    @include md {
+                        font-size: map-get($font-size-mobile, small);
+                    }
+                }
+                a {
+                    font-family: $font-family-EN;
+                    color: white;
+                    font-size: map-get($font-size-desktop, small);
+                    font-weight: map-get($font-weight, bold);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                    text-transform: capitalize;
+                    opacity: 65%;
+                    text-align: left;
+                    line-height: 30px;
+                    padding-left: 0;
+                    text-decoration: none;
+                    transition: 0.3s;
+                    @include md {
+                        font-size: map-get($font-size-mobile, small);
+                    }
+                    &:hover {
+                        color: map-get($color, hover);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#copyright {
+    background-color: map-get($color, main);
+    height: 40px;
+    @include center;
+    p {
+        font-family: $font-family-CN;
+        color: black;
+        font-size: map-get($font-size-desktop, x-small);
+        font-weight: map-get($font-weight, regular);
+        letter-spacing: map-get($letter-spacing, desktop);
+        @include md {
+            font-size: map-get($font-size-mobile, x-small);
+            letter-spacing: map-get($letter-spacing, mobile);
+        }
+    }
+}

@@ -1,0 +1,159 @@
+#contact {
+    padding-bottom: 100px;
+    width: 100%;
+    height: auto;
+    @include md {
+        padding-bottom: 50px;
+    }
+    h1 {
+        font-family: $font-family-EN-cursive;
+        color: white;
+        font-size: map-get($font-size-desktop, large);
+        font-weight: map-get($font-weight, regular);
+        letter-spacing: map-get($letter-spacing, desktop);
+        text-align: center;
+        @include md {
+            font-size: map-get($font-size-mobile, large);
+            letter-spacing: map-get($letter-spacing, mobile);
+        }
+    }
+    .outline {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        border: 1px solid map-get($color, main);
+        height: 415px;
+        width: auto;
+        @include center;
+        @include md {
+            height: auto;
+        }
+        .phone {
+            word-break: break-all;
+            text-align: center;
+            height: 326px;
+            line-height: 50px;
+            flex-direction: column;
+            @include center;
+            @include md {
+                height: 200px;
+                line-height: 40px;
+            }
+            i {
+                color: map-get($color, main);
+                font-size: 55px;
+                @include md {
+                    font-size: 44px
+                }
+            }
+            .contact-title {
+                font-family: $font-family-EN;
+                color: map-get($color, main);
+                font-size: map-get($font-size-desktop, small);
+                font-weight: map-get($font-weight, bold);
+                letter-spacing: map-get($letter-spacing, mobile);
+                text-transform: uppercase;
+                @include md {
+                    font-size: map-get($font-size-mobile, small);
+                }
+            }
+            a {
+                font-family: $font-family-CN;
+                color: white;
+                font-size: map-get($font-size-desktop, small);
+                font-weight: map-get($font-weight, medium);
+                letter-spacing: map-get($letter-spacing, mobile);
+                text-decoration: none;
+                transition: 0.3s;
+                @include md {
+                    font-size: map-get($font-size-mobile, small);
+                }
+                &:hover {
+                    color: map-get($color, hover);
+                }
+            }
+        }
+        .address {
+            @extend .phone;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-left: 1px solid map-get($color, main);
+            border-right: 1px solid map-get($color, main);
+            @include between-md-sm {
+                border: none;
+                border-top: 1px solid map-get($color, main);
+                border-bottom: 1px solid map-get($color, main);
+            }
+            @include sm {
+                border: none;
+                border-top: 1px solid map-get($color, main);
+                border-bottom: 1px solid map-get($color, main);
+            }
+        }
+        .email {
+            @extend .phone;
+        }
+    }
+    .form-group {
+        .contact-form {
+            margin-left: auto;
+            margin-right: auto;
+            @include center;
+            .form-control {
+                font-family: $font-family-CN;
+                color: white;
+                font-size: map-get($font-size-desktop, x-small);
+                font-weight: map-get($font-weight, medium);
+                letter-spacing: map-get($letter-spacing, mobile);
+                width: 480px;
+                height: 65px;
+                background-color: map-get($color, form);
+                border-color: map-get($color, form);
+                border-radius: 0;
+                transition: 0.3s;
+                border-radius: 5px;
+                @include xl {
+                    width: 380px;
+                    height: 65px;
+                }
+                @include md {
+                    font-size: map-get($font-size-mobile, x-small);
+                    width: 384px;
+                    height: 52px;
+                }
+                &:hover {
+                    border-color: map-get($color, hover);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.075);
+                }
+                &:focus {
+                    border-color: map-get($color, main);
+                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.075);
+                }
+            }
+            &::placeholder {
+                padding-left: 10px;
+                opacity: 70%;
+                background-color: map-get($color, form);
+            }
+        }
+    }
+    .contact-with-line {
+        padding-top: 100px;
+    }
+}
+
+#end-of-contact {
+    width: auto;
+    height: 250px;
+    position: relative;
+    background-attachment: fixed;
+    overflow: hidden;
+    @include background-image(cover);
+    @include md {
+        height: 200px;
+        background-image: none;
+    }
+    @include sm {
+        height: 150px;
+        background-image: none;
+    }
+}

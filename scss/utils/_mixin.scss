@@ -1,0 +1,72 @@
+//section
+@mixin section-size {
+    width: 100%;
+    height: 100vh;
+}
+
+//background-image
+@mixin background-image($background-size) {
+    background-size: $background-size;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+//=====center=====//
+//image
+@mixin center-image {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+//flex-center
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//flex-end
+@mixin end {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+//media queries
+@mixin sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin between-md-sm {
+    @media (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: 992px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (max-width: 1400px) {
+        @content;
+    }
+}

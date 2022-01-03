@@ -1,0 +1,52 @@
+#title {
+    margin: 50px 0;
+    width: auto;
+    height: 250px;
+    position: relative;
+    @include center;
+    @include background-image(cover);
+    background-attachment: fixed;
+    overflow: hidden;
+    @include md {
+        height: 200px;
+        background-image: none;
+    }
+    @include sm {
+        height: 150px;
+        background-image: none;
+    }
+    p {
+        position: absolute;
+        margin-bottom: 60px;
+        z-index: 1;
+        font-family: $font-family-EN;
+        color: map-get($color, gray);
+        font-size: 250px;
+        font-weight: map-get($font-weight, medium);
+        @include md {
+            font-size: 200px;
+        }
+        @include sm {
+            font-size: 150px;
+        }
+    }
+    h3 {
+        position: absolute;
+        z-index: 2;
+        font-family: $font-family-EN;
+        color: map-get($color, main);
+        font-size: 65px;
+        font-weight: map-get($font-weight, semi-bold);
+        letter-spacing: map-get($letter-spacing, desktop);
+        text-transform: uppercase;
+        text-align: center;
+        @include md {
+            font-size: 52px;
+            letter-spacing: map-get($letter-spacing, mobile);
+        }
+        @include sm {
+            font-size: 39px;
+            letter-spacing: map-get($letter-spacing, mobile);
+        }
+    }
+}

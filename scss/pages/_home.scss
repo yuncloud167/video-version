@@ -1,0 +1,68 @@
+#home {
+    @include section-size;
+    @include background-image(cover);
+    z-index: -1;
+    #home-content {
+        .home-img {
+            z-index: 0;
+            margin-top: 305px;
+            @include xxl {
+                margin-top: 180px;
+            }
+            @include md {
+                margin-top: 200px;
+            }
+            @include sm {
+                margin-top: 150px;
+            }
+            img {
+                height: 305px;
+                width: auto;
+                @include md {
+                    height: 244px;
+                    width: auto;
+                }
+                @include sm {
+                    height: 183px;
+                    width: auto;
+                }
+            }
+        }
+        .cover {
+            margin-top: 205px;
+            z-index: 0;
+            background-color: map-get($color, bg);
+            width: 100%;
+            height: 205px;
+            border-top: 5px solid map-get($color, main);
+            border-bottom: 5px solid map-get($color, main);
+            @include center;
+            @include xxl {
+                margin-top: 100px;
+            }
+            @include md {
+                height: 164px;
+                margin-top: 180px;
+            }
+            @include sm {
+                margin-top: 150px;
+            }
+            h1 {
+                text-align: center;
+                font-family: $font-family-CN;
+                color: white;
+                font-size: map-get($font-size-desktop, large);
+                font-weight: map-get($font-weight, bold);
+                letter-spacing: 20px;
+                @include md {
+                    font-size: map-get($font-size-mobile, large);
+                    letter-spacing: 10px;
+                }
+                @include sm {
+                    font-size: map-get($font-size-mobile, normal);
+                    letter-spacing: 10px;
+                }
+            }
+        }
+    }
+}

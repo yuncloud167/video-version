@@ -1,0 +1,45 @@
+#foreword {
+    z-index: -1;
+    blockquote {
+        bottom: 15%;
+        padding: 300px;
+        margin: 0 auto;
+        position: absolute;
+        z-index: 1;
+        @include md {
+            padding: 20px;
+            bottom: 50%;
+        }
+        .foreword-title {
+            @include center;
+            h1 {
+                font-family: $font-family-EN;
+                color: white;
+                font-size: map-get($font-size-desktop, small);
+                font-weight: map-get($font-weight, regular);
+                letter-spacing: map-get($letter-spacing, desktop);
+                font-style: italic;
+                line-height: 2em;
+                @include md {
+                    font-size: map-get($font-size-mobile, small);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                }
+            }
+        }
+        .foreword-content {
+            @include end;
+            margin-top: 30px;
+            h2 {
+                font-family: $font-family-EN;
+                color: white;
+                font-size: map-get($font-size-desktop, x-small);
+                font-weight: map-get($font-weight, light);
+                letter-spacing: map-get($letter-spacing, desktop);
+                @include md {
+                    font-size: map-get($font-size-mobile, x-small);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                }
+            }
+        }
+    }
+}

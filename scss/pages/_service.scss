@@ -1,0 +1,108 @@
+#service {
+    height: auto;
+    width: 100%;
+    .row {
+        margin-top: 150px;
+        position: relative;
+        .service-title {
+            margin-top: -50px;
+            margin-left: 50px;
+            position: absolute;
+            background-color: map-get($color, bg);
+            height: auto;
+            width: auto;
+            padding: 10px;
+            z-index: 999;
+            @include center;
+            @include md {
+                margin-top: -30px;
+            }
+            h2 {
+                font-family: $font-family-EN-cursive;
+                color: map-get($color, main);
+                font-size: map-get($font-size-desktop, x-large);
+                font-weight: map-get($font-weight, regular);
+                letter-spacing: map-get($letter-spacing, desktop);
+                text-transform: capitalize;
+                @include md {
+                    font-size: map-get($font-size-mobile, x-large);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                }
+                @include sm {
+                    font-size: map-get($font-size-mobile, large);
+                    letter-spacing: map-get($letter-spacing, mobile);
+                }
+            }
+        }
+        .swiper {
+            height: auto;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            width: 100%;
+            border-top: 2px solid map-get($color, main);
+            border-bottom: 2px solid map-get($color, main);
+            display: flex;
+            justify-content: center;
+            flex-wrap: nowrap;
+            .swiper-wrapper {
+                will-change: transform;
+                .swiper-slide {
+                    width: 500px;
+                    height: 500px;
+                    overflow: hidden;
+                    @include center;
+                    @include md {
+                        width: 400px;
+                        height: 400px;
+                    }
+                    .slide-image {
+                        height: 100%;
+                        width: 100%;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        transition: transform 1400ms ease;
+                        &:hover {
+                            transform: scale3d(1.2, 1.2, 1);
+                            will-change: transform;
+                            transition: transform 1400ms ease;
+                            cursor: pointer;
+                        }
+                    }
+                    .slide-content {
+                        width: 500px;
+                        height: 500px;
+                        background-color: map-get($color, form);
+                        @include center;
+                        padding: 80px;
+                        transition: transform 1400ms ease;
+                        &:hover {
+                            transform: scale3d(1.2, 1.2, 1);
+                            will-change: transform;
+                            transition: transform 1400ms ease;
+                            cursor: pointer;
+                        }
+                        @include md {
+                            width: 400px;
+                            height: 400px;
+                        }
+                        h1 {
+                            line-height: 2em;
+                            font-family: $font-family-CN;
+                            color: white;
+                            font-size: map-get($font-size-desktop, x-small);
+                            font-weight: map-get($font-weight, medium);
+                            letter-spacing: map-get($letter-spacing, desktop);
+                            text-shadow: 2px 2px 2px rgba( #000, 1);
+                            text-align: start;
+                            @include md {
+                                font-size: map-get($font-size-mobile, x-small);
+                                letter-spacing: map-get($letter-spacing, mobile);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

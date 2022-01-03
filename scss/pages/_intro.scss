@@ -1,0 +1,13 @@
+#intro {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    @include center;
+    iframe {
+        @include md {
+            height: 800px;
+            width: 500px;
+        }
+    }
+}

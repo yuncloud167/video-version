@@ -1,0 +1,101 @@
+.navbar {
+    height: 100%;
+    margin-top: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    @include lg {
+        margin-top: 0;
+    }
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include lg {
+            display: none;
+        }
+        li {
+            width: 150px;
+            height: auto;
+            text-align: center;
+            position: relative;
+            a {
+                font-family: $font-family-EN;
+                color: map-get($color, main);
+                font-size: map-get($font-size-desktop, small);
+                font-weight: map-get($font-weight, bold);
+                letter-spacing: 0;
+                text-transform: capitalize;
+                text-align: center;
+                white-space: nowrap;
+                transition: 0.3s;
+                text-decoration: none;
+                &:focus,
+                &:hover {
+                    color: map-get($color, hover);
+                }
+            }
+        }
+        .logo {
+            @include lg {
+                display: none;
+            }
+        }
+    }
+}
+
+//Mobile Navigation 
+.mobile-nav-toggle {
+    color: map-get($color, main);
+    font-size: map-get($font-size-mobile, normal);
+    cursor: pointer;
+    display: none;
+    justify-content: flex-end;
+    margin-right: 15px;
+    line-height: 0;
+    transition: 0.5s;
+    @include lg {
+        display: block;
+    }
+}
+
+.navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    @include center-image;
+    transition: 0.3s;
+    z-index: 999;
+    .mobile-nav-toggle {
+        position: absolute;
+        top: 25px;
+        right: 2px;
+        @include md {
+            right: 10px;
+        }
+    }
+    ul {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        padding: 80px 0;
+        background-color: white;
+        overflow-y: auto;
+        transition: 0.3s;
+        li {
+            width: auto;
+            height: 50px;
+            position: relative;
+            @include center;
+            a {
+                @extend a;
+                &:focus {
+                    color: map-get($color, hover);
+                }
+            }
+        }
+    }
+}

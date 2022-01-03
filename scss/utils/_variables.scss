@@ -1,0 +1,15 @@
+//color
+$color:( bg: #000, main: #e8c286, hover: #ad1c21, gray:#282828, form: #191919);
+//font-weight
+$font-weight:(bold:700, semi-bold:600, medium:500, regular:400, light:300);
+//font-family
+$font-family-CN:'Noto Serif TC',
+serif;
+$font-family-EN:'Cormorant Garamond',
+serif;
+$font-family-EN-cursive:'Dancing Script',
+cursive;
+//font-size
+$font-size-desktop: (x-large: 56px, large: 42px, medium: 35px, normal: 28px, small: 18px, x-small: 14px);
+$font-size-mobile: (x-large: 42px, large: 36px, medium: 30px, normal: 24px, small: 16px, x-small: 12px);
+$letter-spacing:(desktop: 5px, mobile: 2px);
