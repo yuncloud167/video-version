@@ -147,6 +147,7 @@
     position: relative;
     background-attachment: fixed;
     overflow: hidden;
+    background-image: url(/assets/img/base/bg-opacity.png);
     @include background-image(cover);
     @include md {
         height: 200px;
