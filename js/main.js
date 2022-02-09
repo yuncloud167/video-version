@@ -67,24 +67,6 @@
         })
     }
 
-
-
-    /**
-     * Back to top button
-     */
-    let backtotop = select('.back-to-top')
-    if (backtotop) {
-        const toggleBacktotop = () => {
-            if (window.scrollY > 100) {
-                backtotop.classList.add('active')
-            } else {
-                backtotop.classList.remove('active')
-            }
-        }
-        window.addEventListener('load', toggleBacktotop)
-        onscroll(document, toggleBacktotop)
-    }
-
     /**
      * Mobile nav toggle
      */
@@ -132,5 +114,18 @@
             }
         }
     });
+
+    window.onload = function() {
+        if (document.body.scrollTop > 0) {
+            console.log(1);
+            window.scrollTo(0, -1);
+            document.body.scrollTop = 0;
+        }
+        window.onbeforeunload = function() {
+            //刷新后页面自动回到顶部
+            document.documentElement.scrollTop = 0; //ie下
+            document.body.scrollTop = 0; //非ie
+        }
+    }
 
 })()

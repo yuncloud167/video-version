@@ -1,7 +1,13 @@
 #intro {
-    margin-top: 100px;
+    margin: 100px 0;
     width: 100%;
     height: auto;
     overflow: hidden;
     @include center;
+    @include md {
+        margin: 50px 0;
+    }
+    video {
+        object-fit: cover;
+    }
 }

@@ -4,6 +4,7 @@ header {
     border-top: 12px solid map-get($color, main);
     border-bottom: 1px solid map-get($color, main);
     transition: top 0.4s ease-in-out;
+    z-index: 999;
     @include center;
     @include lg {
         border-top: 1px solid map-get($color, main);
