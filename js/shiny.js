@@ -18,15 +18,15 @@ var settings = {
 
     'abstract': {
 
-        'emission_rate': 1000,
-        'min_life': 2,
-        'life_range': 2,
+        'emission_rate': 100,
+        'min_life': 3,
+        'life_range': 5,
         'min_angle': 0,
         'angle_range': 360,
         'min_speed': 30,
         'speed_range': 100,
-        'min_size': 2,
-        'size_range': 4,
+        'min_size': 3,
+        'size_range': 5,
         'start_colours': [
             [229, 191, 131, 0.8],
             [162, 125, 39, 0.8],
@@ -46,8 +46,8 @@ var settings = {
             y: 0
         },
         'position_range': {
-            x: 60,
-            y: 60
+            x: 0,
+            y: 0
         }
     },
 
