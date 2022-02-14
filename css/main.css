@@ -12707,6 +12707,26 @@ header {
   }
 }
 
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#back-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 #contact .line-btn {
   transition: all 0.1s ease-in;
 }
