@@ -1,51 +1,40 @@
 #home {
     @include section-size;
     @include background-image(cover);
-    z-index: -1;
     #home-content {
-        .home-img {
-            z-index: 0;
-            margin-top: 305px;
-            @include xxl {
-                margin-top: 180px;
-            }
+        padding-top: 330px;
+        @include xxl {
+            padding-top: 450px;
+        }
+        @include md {
+            padding-top: 350px;
+        }
+        @include sm {
+            padding-top: 220px;
+        }
+        img {
+            height: 305px;
+            width: auto;
             @include md {
-                margin-top: 200px;
+                height: 244px;
+                width: auto;
             }
             @include sm {
-                margin-top: 150px;
-            }
-            img {
-                height: 305px;
+                height: 183px;
                 width: auto;
-                @include md {
-                    height: 244px;
-                    width: auto;
-                }
-                @include sm {
-                    height: 183px;
-                    width: auto;
-                }
             }
         }
         .cover {
-            margin-top: 205px;
-            z-index: 0;
+            position: absolute;
+            bottom: 0;
             background-color: map-get($color, bg);
             width: 100%;
             height: 205px;
             border-top: 5px solid map-get($color, main);
             border-bottom: 5px solid map-get($color, main);
             @include center;
-            @include xxl {
-                margin-top: 100px;
-            }
             @include md {
                 height: 164px;
-                margin-top: 180px;
-            }
-            @include sm {
-                margin-top: 150px;
             }
             h1 {
                 text-align: center;

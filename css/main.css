@@ -11491,54 +11491,52 @@ ul {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  z-index: -1;
 }
 
-#home #home-content .home-img {
-  z-index: 0;
-  margin-top: 305px;
+#home #home-content {
+  padding-top: 330px;
 }
 
 @media (max-width: 1400px) {
-  #home #home-content .home-img {
-    margin-top: 180px;
+  #home #home-content {
+    padding-top: 450px;
   }
 }
 
 @media (max-width: 768px) {
-  #home #home-content .home-img {
-    margin-top: 200px;
+  #home #home-content {
+    padding-top: 350px;
   }
 }
 
 @media (max-width: 576px) {
-  #home #home-content .home-img {
-    margin-top: 150px;
+  #home #home-content {
+    padding-top: 220px;
   }
 }
 
-#home #home-content .home-img img {
+#home #home-content img {
   height: 305px;
   width: auto;
 }
 
 @media (max-width: 768px) {
-  #home #home-content .home-img img {
+  #home #home-content img {
     height: 244px;
     width: auto;
   }
 }
 
 @media (max-width: 576px) {
-  #home #home-content .home-img img {
+  #home #home-content img {
     height: 183px;
     width: auto;
   }
 }
 
 #home #home-content .cover {
-  margin-top: 205px;
-  z-index: 0;
+  position: absolute;
+  bottom: 0;
   background-color: #000;
   width: 100%;
   height: 205px;
@@ -11552,22 +11550,9 @@ ul {
       align-items: center;
 }
 
-@media (max-width: 1400px) {
-  #home #home-content .cover {
-    margin-top: 100px;
-  }
-}
-
 @media (max-width: 768px) {
   #home #home-content .cover {
     height: 164px;
-    margin-top: 180px;
-  }
-}
-
-@media (max-width: 576px) {
-  #home #home-content .cover {
-    margin-top: 150px;
   }
 }
 
@@ -11650,7 +11635,7 @@ header {
   border-top: 12px solid #e8c286;
   border-bottom: 1px solid #e8c286;
   transition: top 0.4s ease-in-out;
-  z-index: 999;
+  z-index: 990;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -11686,7 +11671,7 @@ header {
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  z-index: 997;
+  z-index: 999;
 }
 
 @media (max-width: 992px) {
@@ -12196,7 +12181,7 @@ header {
   height: auto;
   width: auto;
   padding: 10px;
-  z-index: 999;
+  z-index: 99;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
